@@ -1,288 +1,243 @@
-Booking.com Scraper
+🏨 Booking.com Scraper
+Hotel Listings Data Extraction using Selenium
+📖 Project Overview
 
-Project description
+This project is a Selenium-based web scraping automation that extracts publicly available hotel listing data from Booking.com for a given city search.
 
-This project is a Selenium-based web scraping script that extracts publicly available hotel listing data from Booking.com for a given city search. It is designed as a portfolio-grade automation project demonstrating how to handle dynamic, JavaScript-heavy pages, structured data extraction, and post-processing using pandas.
+It is built as a portfolio-grade project to demonstrate real-world handling of:
 
-The scraper collects hotel-level information, such as hotel name, price, rating, reviews, address, cancellation options, property type, and stay details, and exports the cleaned data to CSV files for analysis or reporting.
+Dynamic, JavaScript-rendered web pages
 
-Intended use: Portfolio demonstration and business-to-business data extraction where the client has the legal right to collect the data. This project does not scrape personal user data and should always be used in compliance with the target website’s Terms of Service.
+Reliable element loading using explicit waits
 
-Table of contents
+Structured data extraction
 
+Data cleaning and normalization with pandas
 
+The scraper collects hotel-level information and exports clean, analysis-ready datasets in CSV format.
 
+🎯 Intended Use
 
+Portfolio demonstration
 
-Project description
+Learning real-world web automation
 
+Business-to-business data extraction
 
+⚠️ This project does not collect personal user data and should always be used in accordance with the target website’s Terms of Service.
+
+📑 Table of Contents
+
+Project Overview
 
 Features
 
+Tech Stack
 
-
-Tech stack
-
-
-
-Project structure
-
-
+Project Structure
 
 Installation
 
-
-
 Configuration
 
-
-
 Usage
-
-
 
 Output
 
+How It Works
 
-
-How it works (high-level)
-
-
-
-Limitations & notes
-
-
+Limitations
 
 Troubleshooting
 
-
-
 License
-
-
 
 Contact
 
-Features
-
-
-
-
+✨ Features
 
 Scrapes dynamic hotel listings rendered with JavaScript
 
+Supports infinite scroll / “Load more results” pagination
 
+Uses WebDriverWait instead of unreliable time.sleep
 
-Handles infinite scroll / “Load more results” pagination
+Prevents duplicate hotel records using URL deduplication
 
+Handles missing and stale elements gracefully
 
+Cleans and normalizes raw data using pandas
 
-Uses WebDriverWait instead of heavy time. sleep
+Exports both raw and cleaned CSV datasets
 
-
-
-Deduplication of hotel URLs to avoid repeated records
-
-
-
-Built-in error handling for stale and missing elements
-
-
-
-Data cleaning and normalization using pandas
-
-
-
-CSV export for raw and cleaned datasets
-
-Tech stack
-
-
-
-
+🧰 Tech Stack
 
 Python 3.10+
 
-
-
 Selenium
-
-
 
 pandas
 
-
-
 numpy
 
-Project structure
-
+📂 Project Structure
 booking-com-scraper/
 │
-├── booking_scraper.py        # Selenium scraping logic
-├── data_cleaning.py          # Pandas-based data cleaning
-├── Booking.com_data.csv      # Raw scraped output (example)
-├── booking.com_delhi_hotel_data.csv  # Cleaned dataset (example)
+├── booking_scraper.py              # Selenium scraping logic
+├── data_cleaning.py                # Data cleaning & normalization
+├── Booking.com_data.csv            # Raw scraped data (example)
+├── booking.com_delhi_hotel_data.csv# Cleaned dataset (example)
 ├── requirements.txt
 └── README.md
 
-
-Installation
-
-Clone the repository:
-
+⚙️ Installation
+1️⃣ Clone the repository
 git clone https://github.com/ketandas-codes/booking-com-scraper.git
 cd booking-com-scraper
 
-
-Create and activate a virtual environment:
-
+2️⃣ Create & activate virtual environment
 python -m venv .venv
 source .venv/bin/activate      # macOS / Linux
-.\.venv\Scripts\activate     # Windows PowerShell
+.\.venv\Scripts\activate      # Windows
 
-
-Install dependencies:
-
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
 
-Make sure Google Chrome is installed on your system.
+✔️ Make sure Google Chrome is installed.
 
-Configuration
+🔧 Configuration
 
-Most configuration is handled directly inside the script. You can adjust:
-
-
-
-
+Most settings are controlled directly inside the script:
 
 Target city (default: New Delhi)
 
-
-
 Selenium timeout values
-
-
 
 Headless / non-headless browser mode
 
-Base URL used:
+Base URL:
 
 https://www.booking.com/
 
-
-Usage
+▶️ Usage
 
 Run the scraper:
 
 python booking_scraper.py
 
-
-By default, the script:
-
-
-
-
+Default workflow:
 
 Opens Booking.com
 
-
-
 Searches hotels for New Delhi
-
-
 
 Applies basic filters
 
+Loads multiple result pages
 
+Saves raw data to Booking.com_data.csv
 
-Scrolls and loads multiple result pages
+Cleans data and exports booking.com_delhi_hotel_data.csv
 
-
-
-Saves hotel data to Booking.com_data.csv
-
-
-
-Cleans the data and exports booking.com_delhi_hotel_data.csv
-
-To change the city, update this line in the script:
+To change the city:
 
 scraper.script_run(text="New Delhi")
 
+📤 Output
+🟡 Raw Data — Booking.com_data.csv
 
-Output
-
-Raw data (Booking.com_data.csv)
-
-Contains unprocessed scraped fields:
-
+Unprocessed scraped fields:
 
 hotel_name
 
-price
 hotel_url
+
+price
+
 rating
+
 reviews
+
 address
+
 cancellations
+
 prepayment
+
 property_type
+
 stay_days
 
-Cleaned data (booking.com_delhi_hotel_data.csv)
+🟢 Cleaned Data — booking.com_delhi_hotel_data.csv
 
-Includes normalized fields:
+Final structured dataset:
+
 hotel_name
+
+hotel_url
+
 price
+
 rating
+
 reviews
+
 address
+
 room_description
+
+cancellations
+
+prepayment
+
 nights
+
 adults
 
-How it works (high-level)
+🔍 How It Works (High-Level)
 
-Launches a Chrome browser using Selenium
+Launches Chrome browser using Selenium
 
-Loads search results for the selected city
+Loads hotel search results for selected city
 
-Waits for hotel listing cards to appear
+Waits for hotel cards to load
 
-Scrolls the page and loads more results
+Scrolls page to load additional listings
 
-Extracts hotel-level structured data
+Extracts structured hotel data (including URLs)
 
-Stores raw data in CSV format
-
-
+Stores raw output in CSV
 
 Cleans and normalizes data using pandas
 
-
-
 Exports final CSV files
 
-Limitations & notes
+⚠️ Limitations
 
-Intended for small to medium data volumes
-Website structure changes may require selector updates.
-Frequent scraping may trigger temporary blocking.
-Always respect the target website’s Terms of Service.
-Troubleshooting
-If elements are not found, update XPath selectors.
-Disable headless mode for debugging UI issues
-Reduce scraping frequency if blocking occurs
-License
+Designed for small to medium data volumes
+
+Website layout changes may require selector updates
+
+High-frequency scraping may trigger temporary blocking
+
+🛠 Troubleshooting
+
+Update XPath/CSS selectors if elements change
+
+Disable headless mode for debugging
+
+Reduce scraping frequency if blocked
+
+📜 License
+
 MIT License
 
-Contact
+📬 Contact
+
 Ketan Das
 Python Developer | Web Scraping & Automation
 GitHub: @ketandas-codes
-Email: ketankumar.codes@gmail.com
+📧 Email: ketankumar.codes@gmail.com
 
 Last updated: 2026-01-28
