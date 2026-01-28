@@ -1,5 +1,11 @@
 🏨 Booking.com Scraper
+
+Project Workflow
+- scrape_booking.py — Scrapes hotel data from Booking.com
+- clean_booking.py — Cleans and formats the scraped data
+- 
 Hotel Listings Data Extraction using Selenium
+
 📖 Project Overview
 
 This project is a Selenium-based web scraping automation that extracts publicly available hotel listing data from Booking.com for a given city search.
