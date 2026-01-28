@@ -46,10 +46,10 @@
 . Exports both raw and cleaned CSV datasets  
 
 ## 🧰 Tech Stack  
-. Python 3.10+  
-. Selenium  
-. pandas  
-. numpy  
+. 🐍 Python 3.10+  
+. ✅ Selenium  
+. 🐼 pandas  
+. 🔷numpy  
 
 ## 📂 Project Structure  
 . booking-com-scraper/  
