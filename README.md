@@ -156,5 +156,5 @@
 . Ketan Das  
 . Python Developer | Web Scraping & Automation  
 . GitHub: @ketandas-codes  
-. 📧 Email: ketankumar.codes@gmail.com  
+. 📧 Email:  ketandas.codes@gmail.com
 
