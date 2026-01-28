@@ -1,5 +1,4 @@
-#🏨 Booking.com Scraper
-
+# 🏨 Booking.com Scraper
 ## Project Workflow
 . scrape_booking.py — Scrapes hotel data from Booking.com  
 . clean_booking.py — Cleans and formats the scraped data  
@@ -15,14 +14,14 @@
 . Data cleaning and normalization with pandas  
 . The scraper collects hotel-level information and exports clean, analysis-ready datasets in CSV format.  
 
-🎯 Intended Use  
+## 🎯 Intended Use  
 . Portfolio demonstration  
 . Learning real-world web automation  
 . Business-to-business data extraction  
 
 ⚠️ This project does not collect personal user data and should always be used in accordance with the target website’s Terms of Service.  
 
-📑 Table of Contents  
+## 📑 Table of Contents  
 . Project Overview  
 . Features  
 . Tech Stack  
@@ -37,7 +36,7 @@
 . License  
 . Contact  
 
-✨ Features  
+## ✨ Features  
 . Scrapes dynamic hotel listings rendered with JavaScript  
 . Supports infinite scroll / “Load more results” pagination  
 . Uses WebDriverWait instead of unreliable time.sleep  
@@ -46,13 +45,13 @@
 . Cleans and normalizes raw data using pandas  
 . Exports both raw and cleaned CSV datasets  
 
-🧰 Tech Stack  
+## 🧰 Tech Stack  
 . Python 3.10+  
 . Selenium  
 . pandas  
 . numpy  
 
-📂 Project Structure  
+## 📂 Project Structure  
 . booking-com-scraper/  
 │ ├── booking_scraper.py # Selenium scraping logic  
 │ ├── data_cleaning.py # Data cleaning & normalization  
@@ -61,7 +60,7 @@
 │ ├── requirements.txt  
 │ └── README.md  
 
-⚙️ Installation  
+## ⚙️ Installation  
 . 1️⃣ Clone the repository  
    git clone https://github.com/ketandas-codes/booking-com-scraper.git  
    cd booking-com-scraper  
@@ -83,7 +82,7 @@
 . Headless / non-headless browser mode  
 . Base URL: https://www.booking.com/  
 
-▶️ Usage  
+## ▶️ Usage  
 . Run the scraper:  
    python booking_scraper.py  
 
@@ -98,7 +97,7 @@
 . To change the city:  
    scraper.script_run(text="New Delhi")  
 
-📤 Output  
+## 📤 Output  
 . 🟡 Raw Data — Booking.com_data.csv  
    Unprocessed scraped fields:  
    . hotel_name  
@@ -112,7 +111,7 @@
    . property_type  
    . stay_days  
 
-. 🟢 Cleaned Data — booking.com_delhi_hotel_data.csv  
+## . 🟢 Cleaned Data — booking.com_delhi_hotel_data.csv  
    Final structured dataset:  
    . hotel_name  
    . hotel_url  
@@ -126,7 +125,7 @@
    . nights  
    . adults  
 
-🔍 How It Works (High-Level)  
+## 🔍 How It Works (High-Level)  
 . Launches Chrome browser using Selenium  
 . Loads hotel search results for selected city  
 . Waits for hotel cards to load  
@@ -136,20 +135,20 @@
 . Cleans and normalizes data using pandas  
 . Exports final CSV files  
 
-⚠️ Limitations  
+## ⚠️ Limitations  
 . Designed for small to medium data volumes  
 . Website layout changes may require selector updates  
 . High-frequency scraping may trigger temporary blocking  
 
-🛠 Troubleshooting  
+## 🛠 Troubleshooting  
 . Update XPath/CSS selectors if elements change  
 . Disable headless mode for debugging  
 . Reduce scraping frequency if blocked  
 
-📜 License  
+## 📜 License  
 . MIT License  
 
-📬 Contact  
+## 📬 Contact  
 . Ketan Das  
 . Python Developer | Web Scraping & Automation  
 . GitHub: @ketandas-codes  
