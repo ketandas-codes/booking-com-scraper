@@ -1,4 +1,4 @@
-###🏨 Booking.com Scraper
+#🏨 Booking.com Scraper
 
 ## Project Workflow
 . scrape_booking.py — Scrapes hotel data from Booking.com  
