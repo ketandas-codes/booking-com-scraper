@@ -1,4 +1,4 @@
-hotel_name,price,hotel_ulr,rating,reviews,address,cancellations,prepayment,room_description,nights,adults
+hotel_name,price_rupees,hotel_ulr,rating,reviews,address,cancellations,prepayment,room_description,nights,adults
 hotel tej plaza near igi airport delhi,2339,https://www.booking.com/hotel/in/99-hotels-skyva-suites.html,10,5,"chanakyapuri, new delhi",free cancellation,no  needed,deluxe room,2,2
 hotel city empire new delhi city centre,10692,https://www.booking.com/hotel/in/city-emmpire-dx.html,8,338,"paharganj, new delhi (chandni chowk)",free cancellation,no  needed,superior double or twin room,2,2
 ibis new delhi aerocity - an accor brand,21900,https://www.booking.com/hotel/in/ibis-delhi-airport.html,6.9,7365,"aerocity, new delhi (aerocity)",free cancellation,Unknown,standard queen room,2,2
@@ -19,3 +19,4 @@ aloft new delhi aerocity,25900,https://www.booking.com/hotel/in/aloft-new-delhi-
 holiday inn new delhi aerocity by ihg,31248,https://www.booking.com/hotel/in/holiday-inn-new-delhi-international-airport.html,8.9,7281,"aerocity, new delhi (aerocity)",free cancellation,no  needed,standard king room,2,2
 "uds villa scandinavian - next to vfs, walking to connaught place",13340,https://www.booking.com/hotel/in/uds-villa-new-delhi1.html,8.2,1020,"connaught place, new delhi",free cancellation,Unknown,deluxe twin room,2,2
 moustache delhi,9933,https://www.booking.com/hotel/in/moustache-delhi.html,8.5,358,"new friends colony, new delhi",free cancellation,Unknown,deluxe double room,2,2
+
