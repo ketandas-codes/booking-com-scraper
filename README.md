@@ -2,8 +2,7 @@
 ## Project Workflow
 . [`scrape_booking.py`](scrape_booking.py) — Scrapes hotel data from Booking.com  
 . [`clean_booking.py`](clean_booking.py) — Cleans and formats the scraped data
-
-. [booking.com_delhi_hotel_data.csv](booking.com_delhi_hotel_data.csv) — cleaned dataset (example)
+. [`booking.com_delhi_hotel_data.csv](booking.com_delhi_hotel_data.csv) — cleaned dataset
 
 
 ## Hotel Listings Data Extraction using Selenium
