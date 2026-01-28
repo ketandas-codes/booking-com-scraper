@@ -5,7 +5,7 @@
 
 ## Hotel Listings Data Extraction using Selenium
 
-📖 Project Overview  
+### 📖 Project Overview  
 . This project is a Selenium-based web scraping automation that extracts publicly available hotel listing data from Booking.com for a given city search.  
 . It is built as a portfolio-grade project to demonstrate real-world handling of:  
 . Dynamic, JavaScript-rendered web pages  
